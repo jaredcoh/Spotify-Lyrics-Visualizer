@@ -250,8 +250,8 @@ def getTime():
     dateLabel.after(800, getTime)
 
 def setupSpotify():
-   cid = 'aebb433db69f40198c98fe9ec253e777'
-   secret = 'ed76cd4db7e74da89d361fea0e7a053b'
+   cid = '<ADD CID>'
+   secret = '<ADD secret>'
    scope = "user-read-playback-state user-modify-playback-state"
    username = 'cohja00'  # Replace with your Spotify username
    redirect_uri = 'https://www.yahoo.com'  # Replace with your redirect URI
@@ -267,7 +267,7 @@ def setupSpotify():
    return spotipy.Spotify(auth=token_info['access_token'])
 
 def getGeniusLyrics(track_name, artist):
-    song = lyricsgenius.Genius('ljO8YL3D-8QZ_Kq-T_gScaYIL5bFl7pUK0nu4Q0-RWSkcbebYPikiGjOond1DeqZ').search_song(track_name, artist)
+    song = lyricsgenius.Genius('<ADD Key>').search_song(track_name, artist)
     if song:
         return song.lyrics.split("Lyrics", 1)[1]
     else:
